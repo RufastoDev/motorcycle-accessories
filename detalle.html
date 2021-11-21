@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="icon" href="/assets/img/icon-moto.png" type="image">
+        <title>Accesorios Cortez | Chiclayo - Perú</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="index.html" class="nav__logo">Catálogo <i class="fas fa-motorcycle"></i></a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active">Inicio</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Tienda Física</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Horarios</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <div class="container-detail">
+                
+                <div class="card-detail">
+                    <div class="imgs-detail">
+                        <div class="number-img">1 / 2</div>
+                        <img src="/assets/img/SinBK-MBM.png">
+                        <div class="text">Foto 01</div>
+                    </div>
+                    <div class="imgs-detail">
+                        <div class="number-img">2 / 2</div>
+                        <img src="/assets/img/other-photo-MBM.png">
+                        <div class="text">Foto 02</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class="text-description">
+                        <h2>Casco para hombre</h2>
+                        <ul>
+                            <li>Talla: XL</li>
+                            <li>Marca: MBM</li>
+                            <li>Color disponible: Negro mate</li>
+                            <li>Precio: 125 soles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <i class='bx bxs-store' ></i>
+            <p class="footer__title">Ubícanos en Avenida Imperio 1059 - La Victoria</p>
+            <p>Copyright &#169; 2021</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }    
+
+            function showSlides(n){
+                var i;
+                var slides = document.getElementsByClassName('imgs-detail');
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                
+                slides[slideIndex-1].style.display = "block";  
+
+            }
+
+
+        </script>
+    </body>
+</html>
